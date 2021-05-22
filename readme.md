@@ -38,4 +38,4 @@ This dataset includes the following columns:
 - `section` - The section category of the news article (For some)
 - `publication` - The publisher of the news article
 
-The articles from this dataset mostly span from 2013 to early 2020
+The articles from this dataset mostly span from 2013 to early 2020. However, after applying the preliminaries data cleaning, we end up with a range of 2016-2020.
