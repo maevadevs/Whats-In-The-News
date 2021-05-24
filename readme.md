@@ -26,7 +26,9 @@ Here are the data questions that we are trying to answer with this project:
 
 ### [All The News 2.1](https://components.one/datasets/all-the-news-2-news-articles-dataset/)
 
-The dataset used in this project consists of news articles from the `All The News 2.1` dataset. As raw, this dataset contains 2.7 million news articles and essays from 27 distinct American publishers. However, after applying cleanups on it, I ended up with slightly lower than 2.6 million news articles from 26 distinct American publishers.
+The primary dataset used in this project consists of news articles from the `All The News 2.1` dataset. As raw, this dataset contains 2.7 million news articles and essays from 27 distinct American publishers. However, after applying cleanups on it, I ended up with slightly lower than 2.6 million news articles from 26 distinct American publishers. The articles from this dataset mostly span from 2013 to early 2020. However, after applying the preliminaries data cleaning, we end up with a range of 2016-2020.
+
+**Disclaimer: This project is for non-commercial and research purposes only. All rights, including copyright, in the content of the original articles are owned by the original owners. Original Data Collection by Components.**
 
 This dataset includes the following columns:
 
@@ -38,4 +40,21 @@ This dataset includes the following columns:
 - `section` - The section category of the news article (For some)
 - `publication` - The publisher of the news article
 
-The articles from this dataset mostly span from 2013 to early 2020. However, after applying the preliminaries data cleaning, we end up with a range of 2016-2020.
+### [BBC News Datasets](http://mlg.ucd.ie/datasets/bbc.html)
+
+Additionally, I am using these smaller BBC datasets for discovery purposes. This set consists of two news article datasets, originating from BBC News from 2004-2005. The datasets used for this project are the raw `txt` files, not the pre-processed datasets.
+
+**Disclaimer: This project is for non-commercial and research purposes only. All rights, including copyright, in the content of the original articles are owned by the original owners. Original Data Collection by D. Greene and P. Cunningham. Publication: D. Greene and P. Cunningham. "Practical Solutions to the Problem of Diagonal Dominance in Kernel Document Clustering", Proc. ICML 2006.**
+
+- `BBC` Dataset: Consists of 2225 documents from the BBC news website corresponding to stories in five topical areas:
+  - Business
+  - Entertainment
+  - Politics
+  - Sport
+  - Tech
+- `BBC Sport` Dataset: Consists of 737 documents from the BBC Sport website corresponding to sports news articles in five topical areas
+  - Athletics
+  - Cricket
+  - Football
+  - Rugby
+  - Tennis
