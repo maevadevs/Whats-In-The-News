@@ -1,0 +1,3 @@
+# News Articles Domain Knowledge
+
+In many domains, the age of the training data doesn’t affect the success of the project, though in the case of news articles classification it surely does. In the last four years of politics, culture and pop-culture went through dynamic transformations: Prime Ministers changed twice, a new word “Brexit” has appeared, so has “Megxit”, Liverpool almost won Premier League after 30 years of no luck. This new reality could be a challenge for a model trained on old data and we have to keep it in mind during the experimentation, evaluation in production and designing future quality monitoring.
