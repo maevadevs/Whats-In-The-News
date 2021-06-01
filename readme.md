@@ -1,5 +1,8 @@
 # What's In The News?
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourGitHubName/yourRepo/yourApp/)
+
+
 ## Project Summary
 
 How many news articles can you read in the morning? How long does it take you to read everything? Maybe you don't have much time and simply skim through the headlines? Have you ever thought *"I just wish there is something that can give me a quick summary rundown of all these articles so I can be on top of everything fast"*? Well, those are the same questions that lead me to want an application that could do just that and my drive for creating the *What's In The News* NLP project.
