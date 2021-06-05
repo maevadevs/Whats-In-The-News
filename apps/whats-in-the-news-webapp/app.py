@@ -14,7 +14,7 @@ import re
 
 st.set_page_config(
   page_title="News Article Classifier and Summarizer",  # String or None. Strings get appended with "• Streamlit". 
-	page_icon="random",  # String, anything supported by st.image, or None.
+	page_icon="icons/favicon.ico",  # String, anything supported by st.image, or None.
 	layout="wide",  # Can be "centered" (default) or "wide". In the future also "dashboard", etc.
 	initial_sidebar_state="expanded"  # Can be "auto", "expanded", "collapsed"
 )
@@ -54,7 +54,12 @@ if click_reset:
 # APP TITLE
 # *********
 
-st.title("What's In The News")
+# st.title("What's In The News")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('icons/icon_large.png', width=65)
+with col2:
+    st.title("What's In The News")
 st.subheader("A News Article Classifier and Summarizer Web App")
 
 

@@ -18,6 +18,8 @@
 // 3 - background.js listens for open_new_tab 
 //     and opens a new tab with the given URL when it receives the message.
 
+appUrl = "http://localhost:8501"
+
 /**
  * 1 - Browser Action Click Listener
  * This function is called when the user clicks on the Browser Action button
@@ -45,11 +47,11 @@ chrome.browserAction.onClicked.addListener(tab => {
  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // The request message from content.js could be anything: Switch through it
   switch (request.message) {
-    case "google_search_in_new_tab":
+    case "redirecting_in_new_tab":
       // Grab the passed URL
       url = request.url
       // Build a new Google query url with the url to search for
-      url = "https://google.com/" + "search?q=" + url;
+      url = appUrl + "?url=" + url;
       // Open the Google query in a new tab
       chrome.tabs.create({"url": url});
       // Finish the case
