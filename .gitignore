@@ -2,6 +2,9 @@
 raw-datasets/
 clean-datasets/
 logistics/
+apps/whats-in-the-news-flask/models
+saved-classification-models/
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

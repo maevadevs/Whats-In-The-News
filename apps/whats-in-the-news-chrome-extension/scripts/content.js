@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       // Grab the current URL
       currentUrl = getCurrentUrl();
       // We will just use a basic confirm if the user wants to continue
-      doSearch = window.confirm("The page you are on is: " + currentUrl + ". You will now be redirected to the Webapp")
+      doSearch = window.confirm("You will now be redirected to What's In The News Webapp")
       // If user confirm, open Google Search in a new tab
       if (doSearch) {
         // Grab the URL and pass it to background.js
