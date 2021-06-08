@@ -1,6 +1,6 @@
 # What's In The News?
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourGitHubName/yourRepo/yourApp/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://ec2-3-17-69-84.us-east-2.compute.amazonaws.com:8501/)
 
 
 ## Project Summary
