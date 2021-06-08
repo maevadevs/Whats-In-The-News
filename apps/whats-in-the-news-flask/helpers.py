@@ -1,28 +1,10 @@
-import joblib
-import re
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-import numpy as np
-# For summarization
-import torch
-import pandas as pd
-import numpy as np
-from transformers import AutoTokenizer, AutoModelWithLMHead #AutoModelForCausalLM
+# HELPER FUNCTIONS
+# ****************
 
-# Pre-load these for the summarization
-# Initialize pre-trained tokenizer and model
-summary_tokenizer = AutoTokenizer.from_pretrained("t5-base")
-summary_model = AutoModelWithLMHead.from_pretrained("t5-base", return_dict=True)
-
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-
-
-def get_summary(text):
-    """Summarize a piece of text using T5 Pre-trained model"""
+def get_summary(text, summary_tokenizer, summary_model):
+    """
+    Summarize a piece of text using T5 Pre-trained model
+    """
 
     # Tokenize and tensorize the text
     # For tasks in T5, add the task verb. In our case: summarize
@@ -44,61 +26,17 @@ def get_summary(text):
         num_beams=2
     )
 
-    # Convert summary output tensor IDs to text
-    summary = summary_tokenizer.decode(outputs[0])
-
-    # Return the summary
-    return summary
-
-
-def process_text(text):
-
-    """
-    Preprocess a given text: 
-        - Lowercase
-        - Tokenize
-        - Remove non-needed tokens
-        - Lemmatize
-        - Clean
-    """
-
-    # Convert to lowercase, replace newlines with spaces, strip whitespaces
-    text = text.lower().strip()
-
-    # Tokenize
-    word_tokens = word_tokenize(text)
-    # Convert to a numpy array
-    word_tokens = np.array(word_tokens)
-
-    # Keep only alphabetic characters
-    is_alpha = list(map(str.isalpha, word_tokens))
-    word_tokens = word_tokens[is_alpha]
-
-    # Remove stopwords
-    custom_stopwords = ["said", "say", "says"]
-    stop_words = set(stopwords.words("english") + custom_stopwords)
-    is_not_stopword = list(map(lambda token: token not in stop_words, word_tokens))
-    word_tokens = word_tokens[is_not_stopword]
-
-    # Lemmatize
-    lemmatizer = WordNetLemmatizer()
-    vectorize_lemmatizer = np.vectorize(lemmatizer.lemmatize)
-    word_tokens = vectorize_lemmatizer(word_tokens)
-
-    # Convert into a setence form
-    sentence = " ".join(word_tokens)
-
-    # Return final tokenized sentence
-    return sentence
+    # Convert summary output tensor IDs to text and return as summary
+    return summary_tokenizer.decode(outputs[0])
 
 
 def get_category_mapping(predicted_num):
-
     """
     Set of category-numbers mapping. 
     This is used to get back the actual category from the predicted_num.
     """
 
+    # A predefined mapping of categories
     category_mapping = [
         ('Arts and Entertainment', 0),
         ('Automobiles', 1),
@@ -123,9 +61,7 @@ def get_category_mapping(predicted_num):
         ('World', 20)
     ]
 
-    # Now, get the actual category from the mapping
+    # Now, get the actual category from the mapping and return
     for category, num in category_mapping:
         if num == predicted_num:
             return category
-
-

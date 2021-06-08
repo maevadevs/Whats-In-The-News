@@ -27,10 +27,10 @@ from helpers import get_article_text_from_url, get_prediction_and_summary, get_w
 # Note: This must be the first Streamlit command used in your app, and must only be set once
 
 st.set_page_config(
-    page_title="News Article Classifier and Summarizer", # String or None. Strings get appended with "• Streamlit". 
-    page_icon="./icons/favicon.ico",                       # String, anything supported by st.image, or None.
-    layout="wide",                                       # Can be "centered" (default) or "wide". In the future also "dashboard", etc.
-    initial_sidebar_state="expanded"                     # Can be "auto", "expanded", "collapsed"
+    page_title="What's In The News",    # String or None. Strings get appended with "• Streamlit". 
+    page_icon="./icons/favicon.ico",    # String, anything supported by st.image, or None.
+    layout="wide",                      # Can be "centered" (default) or "wide". In the future also "dashboard", etc.
+    initial_sidebar_state="expanded"    # Can be "auto", "expanded", "collapsed"
 )
 
 # Get the Query Parameters
