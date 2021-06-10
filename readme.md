@@ -13,7 +13,7 @@ How many news articles can you read in the morning? How long does it take you to
 
 <img src="images/screenshot2.png">
 
-In this project, I analyze textual data contained within News Articles and build a Data Science application that would allow us to dissect those articles. Then, with some NLP-based Machine Learning methods, I make predictions on classifying News Articles and generate short-summaries of those articles.
+In this project, I used textual data contained within News Articles and used a Data Science approach to dissect those articles. Then, with some NLP-based Machine Learning methods, I built a Machine Learning-based Web application that allows a end-user to make predictions on classifying textual contents of articles and generate short summaries of those articles.
 
 <img src="images/screenshot1.png">
 
